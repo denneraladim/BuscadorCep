@@ -35,6 +35,7 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
 3. Criado o arquivo Global
 4. Instalar a biblioteca react icons para utilizar icones no projeto
 5. Criar a Responsividade do projeto
+6. Criar a pasta Hook para o Use State
 5. Consulta de CEPs através de uma API externa.
 6. Exibição de informações detalhadas como endereço, bairro, cidade e estado.
 
