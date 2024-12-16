@@ -16,6 +16,10 @@ background: linear-gradient(#121212, #212b46);
 export const Title = styled.h1`
 font-size: 85px;
 color: #fff;
+
+@media(max-width: 620px){
+    font-size: 60px;
+}
 `;
 
 export const ContainerInput = styled.div`
@@ -62,11 +66,20 @@ flex-direction: column;
 background-color: #fff;
 width: 500px;
 border-radius: 8px;
+
+@media(max-width: 620px){
+    width: 80%;
+    min-height: 150px;
+}
 `;
 
 export const Cep = styled.h2`
 margin: 16px 0;
 font-size: 39px;
+
+@media(max-width: 620px){
+    font-size: 28px;
+}
 `;
 
 export const Address = styled.span`
