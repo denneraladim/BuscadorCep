@@ -5,7 +5,8 @@ import {
     Input,
     ButtonSearch,
     IconSearch,
-    Main, Cep,
+    Main,
+    Cep,
     Address,
 } from './styled';
 
