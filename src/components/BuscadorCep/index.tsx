@@ -1,30 +1,30 @@
-import {Container, IconSearch } from './styled';
+import {Container, Title, ContainerInput, Input, ButtonSearch,  IconSearch, Main, Cep, Address } from './styled';
 
 
 export default function BuscadorCep(){
     return (
         <Container>
-         <h1 className="title">Buscador Cep</h1>
+         <Title>Buscador Cep</Title>
 
-        <div className="containerInput">
-            <input
+        <ContainerInput>
+            <Input
              type="text"
              placeholder="Digite seu cep..." 
             />
 
-            <button className="buttonSearch">
+            <ButtonSearch>
             <IconSearch/>
-            </button>
-        </div>
+            </ButtonSearch>
+        </ContainerInput>
 
-        <main className='main'>
-            <h2>Cep: 79003222</h2>
+        <Main>
+            <Cep>Cep: 79003222</Cep>
 
-            <span>Rua teste algum</span>
-            <span>Complemento: Algum complemento</span>
-            <span>Vila Rosa</span>
-            <span>Campo Grande - MS</span>
-        </main>
+            <Address>Rua teste algum</Address>
+            <Address>Complemento: Algum complemento</Address>
+            <Address>Vila Rosa</Address>
+            <Address>Campo Grande - MS</Address>
+        </Main>
         </Container>
         
     )
