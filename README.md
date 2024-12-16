@@ -36,12 +36,16 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
 4. Instalar a biblioteca react icons para utilizar icones no projeto
 5. Criar a Responsividade do projeto
 6. Consulta de CEPs através de uma API externa.
-6. Exibição de informações detalhadas como endereço, bairro, cidade e estado.
+7. Instalar a biblioteca Axios para requisições HTTP
+8. Exibição de informações detalhadas como endereço, bairro, cidade e estado.
 
 
 # Instalado o React Icons
 
     npm install react-icons
+
+# Instalação da Biblioteca Axios
+    npm i axios    
 
 # Licença
 Este projeto é licenciado sob a MIT License.

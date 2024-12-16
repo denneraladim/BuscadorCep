@@ -1,3 +1,6 @@
+
+import { useState } from 'react';
+
 import {
     Container,
     Title,
@@ -12,6 +15,12 @@ import {
 
 
 export default function BuscadorCep() {
+
+    const [input, setInput] = useState('');
+
+    function handleSearch(){
+        alert("Valor do input" + input);
+    }
     return (
         <Container>
             <Title>Buscador Cep</Title>
@@ -20,9 +29,11 @@ export default function BuscadorCep() {
                 <Input
                     type="text"
                     placeholder="Digite seu cep..."
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
                 />
 
-                <ButtonSearch>
+                <ButtonSearch onClick={handleSearch}>
                     <IconSearch />
                 </ButtonSearch>
             </ContainerInput>
