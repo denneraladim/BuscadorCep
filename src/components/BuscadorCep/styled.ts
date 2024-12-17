@@ -15,7 +15,7 @@ background: linear-gradient(#121212, #212b46);
 
 export const Title = styled.h1`
 font-size: 85px;
-color: #fff;
+color: ${(props) => props.theme.colors.primary};
 
 @media(max-width: 620px){
     font-size: 60px;
@@ -23,7 +23,7 @@ color: #fff;
 `;
 
 export const ContainerInput = styled.div`
-background-color: rgba(255,255,255,0.2);
+background-color: ${(props) => props.theme.colors.whiteWithOpacity};
 padding: 15px;
 margin: 34px 0;
 display: flex;
@@ -35,12 +35,12 @@ export const Input = styled.input`
 background-color: transparent;
 border: 0;
 font-size: 20px;
-color: #fff;
+color: ${(props) => props.theme.colors.primary};
 outline: none;
 margin-right: 8px;
 
 &::placeholder {
-    color: #f1f1f1;
+    color: ${(props) => props.theme.colors.primary};
 }
 `;
 
@@ -59,7 +59,7 @@ cursor: pointer;
 
 export const IconSearch = styled(FiSearch)`
 font-size: 25px;
-color: #FFF;
+color: ${(props) => props.theme.colors.primary};
 `;
 
 export const Main = styled.main`
@@ -67,7 +67,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #fff;
+background-color: ${(props) => props.theme.colors.primary};
 width: 500px;
 border-radius: 8px;
 
