@@ -54,6 +54,6 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
 Este projeto é licenciado sob a MIT License.
 
 
-# Projeto em Andamento
+
 
 
