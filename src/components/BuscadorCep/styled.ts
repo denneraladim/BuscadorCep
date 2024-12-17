@@ -51,6 +51,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
+
+&:hover {
+    background-color: #4CAF50;
+}
 `;
 
 export const IconSearch = styled(FiSearch)`
