@@ -21,18 +21,25 @@ interface cepData {
     bairro: string;
     localidade: string;
     uf: string;
-    [key: string]: any;
+
 }
 
 
 export default function BuscadorCep() {
 
     const [input, setInput] = useState<string>('');
-    const [cep, setCep] = useState<cepData>({});
+    const [cep, setCep] = useState<cepData>({
+        cep: '',
+        logradouro: '',
+        complemento: '',
+        bairro: '',
+        localidade: '',
+        uf: '',
+    });
 
-    async function handleSearch(){
-        
-        if(input === ''){
+    async function handleSearch() {
+
+        if (input === '') {
             alert("Preencha algum cep!")
             return;
         }
@@ -41,7 +48,7 @@ export default function BuscadorCep() {
             setCep(response.data)
             setInput("");
 
-        }catch {
+        } catch {
             alert("Ops erro ao buscar");
             setInput("");
         }
@@ -73,7 +80,7 @@ export default function BuscadorCep() {
                 </Main>
             )}
 
-            
+
         </Container>
 
     )
