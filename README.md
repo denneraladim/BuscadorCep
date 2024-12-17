@@ -32,7 +32,7 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
 
 1. Estruturação da aplicação com organização de componentes
 2. Instalado a biblioteca Styled Components
-3. Criado o arquivo Global
+3. Criado o arquivo Global e Theme
 4. Instalar a biblioteca react icons para utilizar icones no projeto
 5. Criar a Responsividade do projeto
 6. Consulta de CEPs através de uma API externa.
