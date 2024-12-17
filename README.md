@@ -40,6 +40,7 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
 8. Instalar a biblioteca Axios para requisições HTTP
 9. Utilizando a API de Via Cep 
 10. Exibição de informações detalhadas como endereço, bairro, cidade e estado.
+11. Criar o Teste Unitário
 
 
 # Instalado o React Icons
@@ -47,7 +48,11 @@ O BuscadorCep é uma aplicação criada para consultar CEPs e exibir informaçõ
     npm install react-icons
 
 # Instalação da Biblioteca Axios
-    npm i axios    
+    npm i axios 
+
+# Instalação de Teste Unitario
+     npm install -D @testing-library/react @testing-library/jest-dom jsdom
+       
 
 # Licença
 Este projeto é licenciado sob a MIT License.
