@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import api from '../../services/api';
 
 import {
     Container,
@@ -13,13 +14,37 @@ import {
     Address,
 } from './styled';
 
+interface cepData {
+    cep: string;
+    logradouro: string;
+    complemento: string;
+    bairro: string;
+    localidade: string;
+    uf: string;
+    [key: string]: any;
+}
+
 
 export default function BuscadorCep() {
 
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState<string>('');
+    const [cep, setCep] = useState<cepData>({});
 
-    function handleSearch(){
-        alert("Valor do input" + input);
+    async function handleSearch(){
+        
+        if(input === ''){
+            alert("Preencha algum cep!")
+            return;
+        }
+        try {
+            const response = await api.get(`${input}/json`);
+            setCep(response.data)
+            setInput("");
+
+        }catch {
+            alert("Ops erro ao buscar");
+            setInput("");
+        }
     }
     return (
         <Container>
@@ -38,14 +63,17 @@ export default function BuscadorCep() {
                 </ButtonSearch>
             </ContainerInput>
 
-            <Main>
-                <Cep>Cep: 79003222</Cep>
+            {Object.keys(cep).length > 0 && (
+                <Main>
+                    <Cep>Cep: {cep.cep}</Cep>
+                    <Address>{cep.logradouro}</Address>
+                    <Address>Complemento: {cep.complemento}</Address>
+                    <Address>{cep.bairro}</Address>
+                    <Address>{cep.localidade} - {cep.uf}</Address>
+                </Main>
+            )}
 
-                <Address>Rua teste algum</Address>
-                <Address>Complemento: Algum complemento</Address>
-                <Address>Vila Rosa</Address>
-                <Address>Campo Grande - MS</Address>
-            </Main>
+            
         </Container>
 
     )
